@@ -198,6 +198,12 @@
 	object-fit: contain;
 }
 
+
+.img_wrapper3 {
+	width: 100%;
+	object-fit: contain;
+}
+
 .logo {
 	padding-top: 45px;
 }
