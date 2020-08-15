@@ -383,7 +383,12 @@ animation-direction: alternate;
 
 	/* Block 2 */
 
-
+	.block_2_img {
+		padding-top: 12.5vw;
+		padding-left: 21.25vw;
+		padding-right: 21.25vw;
+		padding-bottom: 7.5vw;
+	}
 
 	.block_2_text {
 		padding-top: 7.5vw;
