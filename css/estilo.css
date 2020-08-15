@@ -283,7 +283,7 @@ animation-direction: alternate;
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
 	.link {
 		font-size: 3vw;
 		letter-spacing: 0.25vw;
