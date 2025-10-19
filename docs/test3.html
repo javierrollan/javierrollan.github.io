@@ -80,7 +80,7 @@
          </li>
         </ul>
        </div>
-       <h2 id="this-is-the-first-header">
+       <h2 class="text-danger border-bottom border-danger" id="this-is-the-first-header">
         This is the first Header
        </h2>
        <p>
@@ -123,21 +123,35 @@
            This is even more coooler
           </td>
          </tr>
-         <tr>
-          <td>
-           {: class="table" }
-          </td>
-          <td>
-          </td>
-         </tr>
         </tbody>
        </table>
+       <p>
+        {: class="table" }
+       </p>
+       <p>
+        {: class=" text-danger border-bottom border-danger" }
+       </p>
        <h2 id="this-is-the-third-header">
         This is the third Header
        </h2>
        <p>
-        Now what is here? maybe another test for other things
+        Now what is here? maybe another test for other things. For example a codeblock
        </p>
+       <pre class="codehilite"><code class="language-yaml">- rule: ls_in_container
+  desc: ls activity in container
+  condition: &gt;
+    evt.type = execve and
+    evt.dir = &lt; and
+    container.id != host and
+    proc.name = ls
+  output: &gt;
+    [direction &lt;] ls in a container |
+    user=%user.name container_id=%container.id container_name=%container.name
+    proc_name=%proc.name parent=%proc.pname cmdline=%proc.cmdline evt_res=%evt.res
+  priority: WARNING
+  tags: [custom, test]
+  enabled: false
+</code></pre>
        <div class="col-xl-10 border rounded bg-body-tertiary">
        </div>
       </div>
