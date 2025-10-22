@@ -20,7 +20,7 @@
    </script>
   </link>
  </head>
- <body class="container-xl">
+ <body class="container-xl bg-dark-subtle">
   <header class="row bg-dark-subtle">
    <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -55,10 +55,17 @@
   </header>
   <main class="row bg-dark-subtle">
    <section class="bg-dark-subtle">
-    <h1 id="third-test">
-     Third test
+    <h1 class="py-3" id="third-test-this-is-a-test-with-a-longer-title-to-make-some-tests">
+     Third test this is a test with a longer title to make some tests
     </h1>
-    <h2 class="text-danger border-bottom border-danger" id="this-is-the-first-header">
+    <hr/>
+    <p>
+     tags: ["Tag1","Tag2","Tag3"]
+Author: Javier Rollan
+Date: 2025-10-22
+    </p>
+    <hr/>
+    <h2 class="py-3" id="this-is-the-first-header">
      This is the first Header
     </h2>
     <p>
@@ -67,7 +74,7 @@
     <p>
      So this is a win win situation
     </p>
-    <h2 id="this-is-the-second-header">
+    <h2 class="py-3" id="this-is-the-second-header">
      This is the second Header
     </h2>
     <p>
@@ -104,18 +111,17 @@
      </tbody>
     </table>
     <p>
-     {: class="table" }
+     More text to fill out the blog post
     </p>
-    <p>
-     {: class=" text-danger border-bottom border-danger" }
-    </p>
-    <h2 id="this-is-the-third-header">
+    <h2 class="py-3" id="this-is-the-third-header">
      This is the third Header
     </h2>
     <p>
      Now what is here? maybe another test for other things. For example a codeblock
     </p>
-    <pre class="border rounded codehilite"><code class="language-yaml">- rule: ls_in_container
+    <div class="card">
+     <div <div="" class="card-body">
+      <pre class="border rounded-bottom"><code :=":" class="language-yaml">- rule: ls_in_container
   desc: ls activity in container
   condition: &gt;
     evt.type = execve and
@@ -130,6 +136,8 @@
   tags: [custom, test]
   enabled: false
 </code></pre>
+     </div>
+    </div>
     <p>
      Fix?
     </p>
