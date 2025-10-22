@@ -119,9 +119,11 @@ Date: 2025-10-22
     <p>
      Now what is here? maybe another test for other things. For example a codeblock
     </p>
-    <div class="card">
-     <div <div="" class="card-body">
-      <pre class="border rounded-bottom"><code :=":" class="language-yaml">- rule: ls_in_container
+    <div class="border py-3">
+     <small class="font-monospace text-uppercase">
+      YAML
+     </small>
+     <pre class="border rounded-bottom"><code :=":" class="language-yaml">- rule: ls_in_container
   desc: ls activity in container
   condition: &gt;
     evt.type = execve and
@@ -136,7 +138,6 @@ Date: 2025-10-22
   tags: [custom, test]
   enabled: false
 </code></pre>
-     </div>
     </div>
     <p>
      Fix?
