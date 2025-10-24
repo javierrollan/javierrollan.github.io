@@ -34,17 +34,17 @@
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        <li class="nav-item">
-        <a class="nav-link" href="landing.html">
+        <a class="nav-link" href="landing">
          Home
         </a>
        </li>
        <li class="nav-item">
-        <a class="nav-link" href="posts.html">
+        <a class="nav-link" href="posts">
          Posts
         </a>
        </li>
        <li class="nav-item">
-        <a class="nav-link" href="about.html">
+        <a class="nav-link" href="about">
          About me
         </a>
        </li>
@@ -55,69 +55,78 @@
   </header>
   <main class="row bg-dark-subtle">
    <section class="bg-dark-subtle">
-    <h1 id="another-post">
-     Another Post
+    <h1 class="py-3" id="this-is-my-first-post">
+     This is my first Post
     </h1>
-    <h2 id="table-of-contents">
-     Table of Contents
+    <h2 class="py-3" id="this-is-the-first-header">
+     This is the first Header
     </h2>
     <p>
-     Now the best is the table of contents
+     This is another test for the output quality of the markdown also I have now discovered how we can use the classes inside the markdown!
+    </p>
+    <p>
+     So this is a win win situation
+    </p>
+    <h2 class="py-3" id="this-is-the-second-header">
+     This is the second Header
+    </h2>
+    <p>
+     Now we have tables too! or it should be like that
     </p>
     <table>
      <thead>
       <tr>
        <th>
-        Section
+        First column
        </th>
        <th>
-        Link
+        Second Column
        </th>
       </tr>
      </thead>
      <tbody>
       <tr>
        <td>
-        Section1
+        Content 1
        </td>
        <td>
-        <a href="#this-is-the-first-title">
-         link
-        </a>
+        Content
        </td>
       </tr>
       <tr>
        <td>
-        Section2
+        This is cool!
        </td>
        <td>
-        <a href="#this-is-the-second-title">
-         link
-        </a>
+        This is even more coooler
        </td>
       </tr>
      </tbody>
     </table>
-    <h2 id="this-is-the-first-title">
-     This is the first title
+    <p>
+     More text to fill out the blog post
+    </p>
+    <h2 class="py-3" id="this-is-the-third-header">
+     This is the third Header
     </h2>
     <p>
-     Here goes text. Cool, now below is a list:
-- item one
-- item two
-- item three
+     Now what is here? maybe another test for other things. For example a codeblock:
     </p>
-    <h2 id="this-is-the-second-title">
-     This is the second title
-    </h2>
-    <p>
-     This is an embeded gist file
-    </p>
-    <script src="https://gist.github.com/javierrollan/34cee675b112216be5c219a647745e71.js">
-    </script>
-    <p>
-     what a cool thing to see
-    </p>
+    <pre class="border rounded-bottom"><code :=":" class="language-yaml">- rule: ls_in_container
+  desc: ls activity in container
+  condition: &gt;
+    evt.type = execve and
+    evt.dir = &lt; and
+    container.id != host and
+    proc.name = ls
+  output: &gt;
+    [direction &lt;] ls in a container |
+    user=%user.name container_id=%container.id container_name=%container.name
+    proc_name=%proc.name parent=%proc.pname cmdline=%proc.cmdline evt_res=%evt.res
+  priority: WARNING
+  tags: [custom, test]
+  enabled: false
+</code></pre>
    </section>
   </main>
   <footer class="row bg-dark-subtle align-items-center">
