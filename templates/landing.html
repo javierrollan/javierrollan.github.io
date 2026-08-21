@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="bg-dark-subtle py-4">
+        <div class="container">
+            <div class="row">
+                <h3 class="py-3">About me</h3>
+                <p><span>Welcome to my blog!</span> I'm a security researcher passionate about threat modeling and automating stuff, with an interest in threat intelligence and malware analysis.</p>
+                </br>
+                <p><span>Why defensive security?</span>  I have always found fascinating how there is not a singular solution for monitoring, which creates endless scenarios and unique challenges. For example a new CVE, a new tool, a new attacker's methodology or the latest report from your red team. All of these sources bring us knowledge that we can use as learning opportunities to improve and develop new monitoring rules to detect these behaviours, the attack vectors used by the attackers.</p>
+            </div>
+            <div>
+                <h5>Latest entries</h5>
+            </div>
+            <div class="row justify-content-md-between">
+                {% for post in posts %}
+                    {% if loop.first %}
+                        <div class="col-12 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        <a href="{{ post.slug }}" class="text-decoration-none text-reset">
+                                            {{ post.title }}
+                                        </a>
+                                    </h3>
+                                    <p class="card-text text-muted">{{ post.date.strftime('%Y-%m-%d') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="col-12 col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="{{ post.slug }}" class="text-decoration-none text-reset">
+                                            {{ post.title }}
+                                        </a>
+                                    </h5>
+                                    <p class="card-text text-muted">{{ post.date.strftime('%Y-%m-%d') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

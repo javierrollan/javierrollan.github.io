@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="bg-dark-subtle">
+        <h1 class="font-monospace py-3">{{ title }}</h1>
+        {% for tag in tags %}
+        {% if tag == "Threat Hunting" %}
+        <span class="badge text-bg-warning my-2">{{ tag }}</span>
+        {% elif tag == "Detection Engineering" %}
+        <span class="badge text-bg-info my-2">{{ tag }}</span>
+        {% elif tag == "SOAR Engineering" %}
+        <span class="badge text-bg-light my-2">{{ tag }}</span>
+        {% elif tag == "SIEM Engineering" %}
+        <span class="badge text-bg-secondary my-2">{{ tag }}</span>
+        {% endif %}
+        {% endfor %}
+        <h6 class="pt-2">{{ author }} - {{ date.strftime('%Y-%m-%d') }}</h5>
+        {{ content | safe }}
+    </section>
+{% endblock %}

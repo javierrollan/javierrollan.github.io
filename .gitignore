@@ -1,3 +1,6 @@
 praetor-blog/
 .pyenv
 .pyenv*
+payload.json
+payload2.txt
+generator.py

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="bg-dark-subtle">
+        <h3 class="py-3">All posts</h2>
+        {% for post in posts %}
+        <h5>
+            <div class="row">
+                <a href="{{ post.slug }}" class="text-decoration-none">
+                    <div class="col-6 text-start">
+                        <span>{{ post.title }}</span>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span><time datetime="{{ post.date.strftime('%Y-%m-%d') }}">{{ post.date.strftime('%Y-%m-%d') }}</time></span>
+                    </div>
+                </a>
+            </div>
+        </h5>
+        {% endfor %}
+    </section>
+{% endblock %}

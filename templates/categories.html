@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="bg-dark-subtle py-4">
+        <div class="container">
+            <div class="row">
+                <p>I write about various SecOps topics, mainly security research and detection engineering.</p>
+            </div>
+            <div class="row justify-content-md-between">
+                {% for post in posts %}
+                        <div class="col-12 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="{{ post.slug }}" class="text-decoration-none text-reset">
+                                            {{ post.title }}
+                                        </a>
+                                    </h5>
+                                    <p class="card-text text-muted">{{ post.date.strftime('%Y-%m-%d') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
